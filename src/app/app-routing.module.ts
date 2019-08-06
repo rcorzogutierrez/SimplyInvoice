@@ -9,6 +9,7 @@ import { InvoicesComponent } from './components/invoices/invoices.component';
 import { HomeComponent } from './components/home/home.component';
 import { IloginComponent } from './components/ilogin/ilogin.component';
 import { InvoiceListComponent } from './components/invoices/invoice-list/invoice-list.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'invoices-list', canActivate: [AuthGuard], component: InvoiceListComponent},
   {path: 'home', canActivate: [AuthGuard], component: HomeComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'ilogin', component : IloginComponent}  
+  {path: 'ilogin', component : IloginComponent},
+  {path: '**', component: NotFoundComponent}  
 ];
 
 @NgModule({

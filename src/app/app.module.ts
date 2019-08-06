@@ -35,6 +35,7 @@ import { PagerService } from './services/pager.service';
 import { AuthGuard } from './auth.guard';
 
 import { environment } from '../environments/environment';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { environment } from '../environments/environment';
     CustomerComponent,
     CustomerListComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
