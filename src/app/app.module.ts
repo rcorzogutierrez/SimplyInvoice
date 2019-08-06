@@ -25,6 +25,8 @@ import { CustomerListComponent } from './components/customers/customer-list/cust
 import { ProductComponent } from './components/products/product/product.component';
 import { ProductListComponent } from './components/products/product-list/product-list.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ProductService } from './services/product.service';
 import { CustomerService } from './services/customer.service';
 import { InvoiceService } from './services/invoice.service';
@@ -60,7 +62,9 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ProductService,

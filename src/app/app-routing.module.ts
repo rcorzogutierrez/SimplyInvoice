@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'invoices-list', canActivate: [AuthGuard], component: InvoiceListComponent},
   {path: 'home', canActivate: [AuthGuard], component: HomeComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'ilogin', component : IloginComponent},
+  {path: 'ilogin', component : IloginComponent}  
 ];
 
 @NgModule({
