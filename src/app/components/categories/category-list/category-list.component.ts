@@ -11,6 +11,9 @@ export class CategoryListComponent implements OnInit {
 
   categoryList: Category[];
   constructor(public categoryService: CategoryService) { }
+  showMessage: boolean;
+  colormsg: string;
+  msg: string;
 
   ngOnInit() {
     this.categoryService.getCategories().snapshotChanges().subscribe(item =>{
@@ -29,6 +32,11 @@ export class CategoryListComponent implements OnInit {
 
   onDelete($key: string){
     this.categoryService.deleteCategory($key);
+    this.showMessage = true;
+    setTimeout(() => this.showMessage = false, 3000);
+    this.colormsg = 'danger';
+    this.msg='Deleted';
+    
   }
 
 }

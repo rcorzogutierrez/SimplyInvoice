@@ -1,6 +1,9 @@
 <div class="card mt-5">
   <div class="card-body">
     <h6 class="text-center">List of Categories</h6>
+    <div class="alert alert-{{colormsg}}" *ngIf="showMessage">
+        {{msg}}
+      </div>
     <table class="table table-sm table-hover">
       <tbody>
         <tr *ngFor="let category of categoryList">

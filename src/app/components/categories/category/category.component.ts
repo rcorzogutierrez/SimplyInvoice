@@ -13,6 +13,10 @@ export class CategoryComponent implements OnInit {
 
   constructor(public categoryService: CategoryService) { }
 
+  showMessage: boolean;
+  colormsg: string;
+  msg: string;
+
   ngOnInit() {
     this.categoryService.getCategories().snapshotChanges().subscribe(item =>{
       this.categoryList = [];
@@ -28,10 +32,16 @@ export class CategoryComponent implements OnInit {
 
   onSubmit(categoryForm: NgForm){
     if(categoryForm.value.$key == null)
-      this.categoryService.insertCategory(categoryForm.value)
+      this.categoryService.insertCategory(categoryForm.value),
+      this.colormsg = 'success',
+      this.msg='Submit'
     else      
-      this.categoryService.updateCategory(categoryForm.value);
+      this.categoryService.updateCategory(categoryForm.value),
+      this.colormsg = 'info',
+      this.msg='Update'
     this.resetForm(categoryForm);
+    this.showMessage = true;
+    setTimeout(() => this.showMessage = false, 3000); 
   }
 
   resetForm(categoryForm?: NgForm)

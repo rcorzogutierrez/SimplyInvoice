@@ -2,6 +2,9 @@
   <div class="card-body">
       <h6 class="text-center">Categories</h6>
     <form #categoryForm="ngForm"(ngSubmit)="onSubmit(categoryForm)">
+        <div class="alert alert-{{colormsg}}" *ngIf="showMessage">
+            {{msg}}
+          </div>
       <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="categoryService.selectedCategory.$key">
       <div class="form-group">
           <div [hidden]="name.valid || name.pristine" class="alert alert-danger"  >Name is required</div>
