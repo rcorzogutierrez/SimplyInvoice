@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InvoiceListComponent } from './invoice-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('InvoiceListComponent', () => {
   let component: InvoiceListComponent;
@@ -9,7 +10,10 @@ describe('InvoiceListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule ],
+      imports: [ FormsModule,ReactiveFormsModule ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
       declarations: [ InvoiceListComponent ]
     })
     .compileComponents();
