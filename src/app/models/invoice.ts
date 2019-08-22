@@ -6,8 +6,7 @@ export class IInvoice {
     invoiceNumber?: number;
     createdAt?: string;
     modifiedAt?:string;
-    uid?: string;
-  
+    uid?: string;  
     customer: Customer;
     purchases: Purchase[];
     totalPrice: number;
@@ -24,12 +23,10 @@ export class IInvoice {
     invoiceNumber?: number;
     createdAt?: string;
     modifiedAt?:string;
-    uid?: string;
-  
+    uid?: string;  
     customer: Customer;
     purchases: Purchase[];
-    totalPrice: number;
-  
+    totalPrice: number;  
     status?: string;
     paymentType?: string;
   }
