@@ -1,7 +1,7 @@
-import { Invoice } from './invoice';
+import { IInvoice } from './invoice';
 
 describe('Invoice', () => {
   it('should create an instance', () => {
-    expect(new Invoice()).toBeTruthy();
+    expect(new IInvoice()).toBeTruthy();
   });
 });
