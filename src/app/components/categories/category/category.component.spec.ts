@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import {AngularFireDatabase } from '@angular/fire/database';
+
 
 import { CategoryComponent } from './category.component';
 
@@ -12,7 +12,7 @@ describe('CategoryComponent', () => {
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
       declarations: [ CategoryComponent ],
-      providers: [AngularFireDatabase ]
+    
     })
     .compileComponents();
   }));

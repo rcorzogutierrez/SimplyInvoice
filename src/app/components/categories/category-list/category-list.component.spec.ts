@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CategoryListComponent } from './category-list.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { AngularFireDatabaseModule } from '@angular/fire/database'
+
 
 describe('CategoryListComponent', () => {
   let component: CategoryListComponent;
@@ -14,7 +14,7 @@ describe('CategoryListComponent', () => {
         CUSTOM_ELEMENTS_SCHEMA
       ],
       declarations: [ CategoryListComponent ],
-      imports: [ AngularFireDatabaseModule ]
+      
     })
     .compileComponents();
   }));
