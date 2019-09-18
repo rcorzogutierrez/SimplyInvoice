@@ -76,7 +76,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     InvoiceService,
     AuthService,
     PagerService,
-    AuthGuard
+    AuthGuard   
   ],
   bootstrap: [AppComponent]
 })

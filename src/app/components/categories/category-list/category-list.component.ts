@@ -26,6 +26,10 @@ export class CategoryListComponent implements OnInit {
     });
   }
 
+  
+  getTest(){
+    return 'pinga'};
+
   onEdit(category: Category){    
     this.categoryService.selectedCategory = Object.assign({},category);
   }

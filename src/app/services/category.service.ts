@@ -11,6 +11,7 @@ export class CategoryService {
 
   constructor(private firebase: AngularFireDatabase) { }
 
+
   getCategories(){
     return this.categoryList = this.firebase.list('categories');
   }
